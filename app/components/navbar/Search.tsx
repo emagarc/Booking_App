@@ -6,12 +6,9 @@ const Search = () => {
   return (
     <div
         className="
-            border-[1px]
-            w-full
-            md:w-auto
-            py-2
-            rounded-full
-            shadow-sm
+            border-[1px] w-full
+            md:w-auto rounded-full
+            py-2 shadow-sm
             hover:shadow-md
             transition
             cursor-pointer
@@ -19,39 +16,33 @@ const Search = () => {
     >
         <div
             className="
-                flex
-                flex-row
+                flex flex-row
                 items-center
                 justify-between
             "
         >
             <div
                 className="
-                    text-sm
+                    text-sm px-6
                     font-semibold
-                    px-6
                 "
             >
                 Anywhere
             </div>
             <div
                 className="
-                    hidden
-                    sm:block
-                    text-sm
+                    hidden sm:block
                     font-semibold
-                    px-6
+                    text-sm px-6
                     border-x-[1px]
-                    flex-1
-                    text-center
+                    flex-1 text-center
                 "
             >
                 Any Week
             </div>
             <div
                 className="
-                    text-sm
-                    pl-6 pr-2
+                    text-sm pl-6 pr-2
                     text-gray-600
                     flex flex-row
                     items-center

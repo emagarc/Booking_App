@@ -32,14 +32,11 @@ const UserMenu: React.FC<UserMenuProps> = ({
             <div
                 onClick={() => {}}
                 className="
-                    hidden
-                    md:block
-                    text-sm
-                    font-semibold
-                    py-3 px-4
-                    rounded-full
+                    hidden md:block text-sm
+                    font-semibold py-3 px-4
                     hover:bg-neutral-100
                     transition cursor-pointer
+                    rounded-full
                 "
             >
                 Airbnb your home
@@ -47,14 +44,10 @@ const UserMenu: React.FC<UserMenuProps> = ({
             <div
                 onClick={toggleOpen}
                 className="
-                    p-4 md:py-1 md:px-2
-                    border-[1px] gap-3
-                    border-neutral-200
-                    flex flex-row
-                    items-center 
-                    rounded-full
-                    cursor-pointer
-                    hover:shadow-md
+                    p-4 md:py-1 md:px-2 items-center 
+                    border-[1px] gap-3 rounded-full
+                    border-neutral-200 cursor-pointer
+                    flex flex-row hover:shadow-md
                     transition
                 "
             >
@@ -67,14 +60,9 @@ const UserMenu: React.FC<UserMenuProps> = ({
         {isOpen && (
             <div
                 className="
-                    absolute
-                    rounded-xl
-                    shadow-md
-                    w-[40vw]
-                    md:w-3/4
-                    bg-white
-                    overflow-hidden
-                    right-0 top-12
+                    absolute rounded-xl shadow-md
+                    w-[40vw] md:w-3/4 bg-white
+                    overflow-hidden right-0 top-12
                     text-sm
                 "
             >

@@ -108,7 +108,12 @@ const RegisterModal = () => {
                     font-light
                 "
             >
-                <div className="justify-center flex flex-row items-center gap-2">
+                <div 
+                    className="
+                        justify-center flex flex-row 
+                        items-center gap-2
+                    "
+                >
                     <div>
                         Already have an account?
                     </div>
