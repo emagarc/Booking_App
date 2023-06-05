@@ -53,7 +53,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
                     rounded-full
                 "
             >
-                Airbnb your home
+                Book your home
             </div>
             <div
                 onClick={toggleOpen}
@@ -101,7 +101,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
                             />
                             <MenuItem
                                 onClick={rentModal.onOpen}
-                                label="Airbnb my home"
+                                label="Book my home"
                             />
                             <hr />
                             <MenuItem

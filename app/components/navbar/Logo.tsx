@@ -16,9 +16,9 @@ const Logo: React.FC<LogoProps> = ({
         onClick={() => router.push("/")}
         alt="Logo"
         className="hidden md:block cursor-pointer"
-        height="100"
-        width="100"
-        src="/images/logo.png"
+        height="45"
+        width="45"
+        src="/images/logoPlane.png"
     />
   )
 }

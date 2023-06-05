@@ -118,7 +118,7 @@ const Categories = () => {
             className="
                 pt-4 flex flex-row
                 items-center justify-between
-                overflow-x-auto
+                overflow-x-auto 
             "
         >
             {categories.map((item) => (

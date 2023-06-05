@@ -127,7 +127,7 @@ const LoginModal = () => {
                     "
                 >
                     <div>
-                        First time using Airbnb?
+                        First time using Booking App?
                     </div>
                     <div
                         onClick={toggle}
