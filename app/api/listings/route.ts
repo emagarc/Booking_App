@@ -1,7 +1,9 @@
+import prisma from "../../libs/prismadb";
 import { NextResponse } from "next/server";
 
-import prisma from "../../libs/prismadb";
 import getCurrentUser from "@/app/actions/getCurrentUser";
+
+// Esta funcion POST crea un nuevo anuncio.
 
 export async function POST(
     request: Request
@@ -25,11 +27,15 @@ export async function POST(
         price
     } = body;
 
+    // Verificamos que no falte nada
+
     Object.keys(body).forEach((value: any) => {
         if (!body[value]) {
             NextResponse.error();
         }
     });
+
+    //Creamos el anuncio
 
     const listing = await prisma.listing.create({
         data: {

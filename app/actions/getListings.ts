@@ -30,6 +30,8 @@ export default async function getListings(
 
         } = params;
 
+        // Definimos los querys para aplicar filtros a los anuncios
+
         let query: any = {};
 
         if (userId) {
@@ -62,7 +64,7 @@ export default async function getListings(
             query.locationValue = locationValue;
         }
 
-        // Ahora hacemos el filtro a los dias ya reservados/
+        // Ahora hacemos el filtro a los dias ya reservados en el sistema.
 
         if (startDate && endDate) {
             query.NOT = {
@@ -83,12 +85,16 @@ export default async function getListings(
             }
         }
 
+        // Buscamos los anuncios pasando por el filtro de querys
+
         const listings = await prisma.listing.findMany({
             where: query,
             orderBy: {
                 createdAt: "desc"
             }
         });
+
+        // Hacemos un fix de createdAt
 
         const safeListings = listings.map((listing) => ({
             ...listing,

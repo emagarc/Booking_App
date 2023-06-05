@@ -14,7 +14,7 @@ export default async function getReservations(
 
         const query: any = {};
 
-        // realizamos el GET de acuerdo a 
+        // realizamos el GET de acuerdo a los parametros seleccionados.
 
 
         // id de aviso

@@ -1,10 +1,13 @@
-import { NextResponse } from "next/server";
-import getCurrentUser from "@/app/actions/getCurrentUser";
 import prisma from "../../../libs/prismadb";
+import { NextResponse } from "next/server";
+
+import getCurrentUser from "@/app/actions/getCurrentUser";
 
 interface IParams {
     reservationId?: string;
 }
+
+// Ruta que cancela una reserva realizada.
 
 export async function DELETE(
     request: Request,

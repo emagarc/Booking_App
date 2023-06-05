@@ -7,6 +7,7 @@ import bcrypt from "bcrypt";
 
 import prisma from "../../../app/libs/prismadb";
 
+// Utilizamos Next Auth para hacer las autentificaciones
 
 export const authOptions: AuthOptions = {
     adapter: PrismaAdapter(prisma),

@@ -1,6 +1,9 @@
 import prisma from "../../libs/prismadb";
-import bcrypt from "bcrypt";
 import { NextResponse } from "next/server";
+
+import bcrypt from "bcrypt";
+
+// Esta ruta crea un nuevo usuario mediante el form de registro
 
 export async function POST(
     request: Request

@@ -8,6 +8,9 @@ export default async function getListingById(
     params: IParams
 ) {
     try {
+
+        // Extraemos el id del anuncio por params y lo buscamos
+
         const { listingId } = params;
 
         const listing = await prisma.listing.findUnique({
@@ -22,6 +25,8 @@ export default async function getListingById(
         if (!listing) {
             return null;
         }
+
+        // Antes de retornar el anuncio fixeamos alfunas props
 
         return {
             ...listing,

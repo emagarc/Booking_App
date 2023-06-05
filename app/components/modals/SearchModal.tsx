@@ -16,6 +16,7 @@ import { formatISO } from "date-fns";
 import Calendar from "../inputs/Calendar";
 import Counter from "../inputs/Counter";
 
+// Este modal setea los filtros de busqueda en la searchbar
 
 enum STEPS {
     LOCATION = 0,

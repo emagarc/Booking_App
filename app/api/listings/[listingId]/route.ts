@@ -1,11 +1,13 @@
+import prisma from "../../../libs/prismadb";
 import { NextResponse } from "next/server";
 
 import getCurrentUser from "@/app/actions/getCurrentUser";
-import prisma from "../../../libs/prismadb";
 
 interface IParams {
     listingId?: string;
 }
+
+// Esta funcion elimina un anuncio del usuario luego de hacer verificaciones.
 
 export async function DELETE(
     request: Request,

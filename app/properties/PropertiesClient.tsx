@@ -1,6 +1,7 @@
 "use client";
 
 import axios from "axios";
+
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 import { toast } from "react-hot-toast";
@@ -8,6 +9,7 @@ import { toast } from "react-hot-toast";
 import Container from "../components/Container";
 import Heading from "../components/Heading";
 import ListingCard from "../components/listings/ListingCard";
+
 import { SafeListing, SafeUser } from "../types";
 
 interface PropertiesClientProps {

@@ -20,7 +20,7 @@ export default async function getFavoriteListings() {
             }
         });
 
-        // ahora fixeamos a "favorites"
+        // Ahora fixeamos algunas props de "favorites"
 
         const safeFavorites = favorites.map((favorite) => ({
             ...favorite,

@@ -1,7 +1,9 @@
-import { NextResponse } from "next/server";
 import prisma from "../../libs/prismadb";
+import { NextResponse } from "next/server";
+
 import getCurrentUser from "@/app/actions/getCurrentUser";
 
+// Ruta que crea la reserva
 
 export async function POST(
     request: Request

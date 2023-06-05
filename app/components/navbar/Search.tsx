@@ -60,35 +60,19 @@ const Search = () => {
     <div
         onClick={searchModal.onOpen}
         className="
-            border-[1px] w-full
-            md:w-auto rounded-full
-            py-2 shadow-sm
-            hover:shadow-md
-            transition
+            border-[1px] w-full md:w-auto rounded-full
+            py-2 shadow-sm hover:shadow-md transition
             cursor-pointer
         "
     >
-        <div
-            className="
-                flex flex-row
-                items-center
-                justify-between
-            "
-        >
-            <div
-                className="
-                    text-sm px-6
-                    font-semibold
-                "
-            >
+        <div className="flex flex-row items-center justify-between">
+            <div className="text-sm px-6 font-semibold">
                 {locationLabel}
             </div>
             <div
                 className="
-                    hidden sm:block
-                    font-semibold
-                    text-sm px-6
-                    border-x-[1px]
+                    hidden sm:block font-semibold
+                    text-sm px-6 border-x-[1px]
                     flex-1 text-center
                 "
             >
@@ -96,27 +80,16 @@ const Search = () => {
             </div>
             <div
                 className="
-                    text-sm pl-6 pr-2
-                    text-gray-600
-                    flex flex-row
-                    items-center
-                    gap-3
+                    text-sm pl-6 pr-2 text-gray-600
+                    flex flex-row items-center gap-3
                 "
             >
                 <div
-                    className="
-                        hidden sm:block
-                    "
-                >
+                    className="hidden sm:block">
                     {guestLabel}
                 </div>
                 <div
-                    className="
-                        p-2 bg-rose-500
-                        rounded-full
-                        text-white
-                    "
-                >
+                    className="p-2 bg-rose-500 rounded-full text-white">
                     <BiSearch />
                 </div>
             </div>

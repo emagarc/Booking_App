@@ -29,7 +29,9 @@ const Input: React.FC<InputProps> = ({
     register,
     errors
 }) => {
+    
   return (
+
     <div className="w-full relative">
         {formatPrice && (
             <BiDollar 

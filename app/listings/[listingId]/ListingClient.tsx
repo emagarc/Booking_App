@@ -1,18 +1,22 @@
 "use client";
 
+import axios from "axios";
+import { useRouter } from "next/navigation";
+
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { SafeListing, SafeUser, SafeReservation } from "@/app/types";
 import { categories } from "../../components/navbar/Categories";
+import toast from "react-hot-toast";
+import { Range } from "react-date-range";
+
 import Container from "@/app/components/Container";
 import ListingHead from "../../components/listings/ListingHead";
 import ListingInfo from "../../components/listings/ListingInfo";
 import ListingReservation from "@/app/components/listings/ListingReservation";
+
 import useLoginModal from "@/app/hooks/useLoginModal";
-import { useRouter } from "next/navigation";
-import axios from "axios";
-import toast from "react-hot-toast";
+
 import { differenceInCalendarDays, eachDayOfInterval } from "date-fns";
-import { Range } from "react-date-range";
 
 const InitialDateRange = {
     startDate: new Date(),

@@ -1,24 +1,25 @@
 "use client";
 
+import axios from "axios";
+import { toast } from "react-hot-toast";
+import { useMemo, useState } from "react";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+
+import { useRouter } from "next/navigation";
+import dynamic from "next/dynamic";
 import useRentModal from "@/app/hooks/useRentModal";
+
 import Modal from "./Modal";
 import Heading from "../Heading";
 import Counter from "../inputs/Counter";
 import ImageUpload from "../inputs/ImageUpload";
 import Input from "../inputs/Input";
 
-import { useMemo, useState } from "react";
-import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
-import dynamic from "next/dynamic";
-
-
 import CategoryInput from "../inputs/CategoryInput";
 import CountrySelect from "../inputs/CountrySelect";
 import { categories } from "../navbar/Categories";
-import axios from "axios";
-import { toast } from "react-hot-toast";
-import { useRouter } from "next/navigation";
 
+// Este modal sigue los siguientes pasos para poner en alquiler una propiedad.
 
 enum STEPS {
   CATEGORY = 0,
@@ -69,7 +70,7 @@ const RentModal = () => {
 
     const Map = useMemo(() => dynamic(() => import("../Map"), {
       ssr: false
-    }), [location]);
+    }), []);
 
     const setCustomValue = (id: string, value: any) => {
       setValue(id, value, {

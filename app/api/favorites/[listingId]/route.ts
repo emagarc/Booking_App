@@ -1,17 +1,24 @@
+import prisma from "../../../libs/prismadb";
 import { NextResponse } from "next/server";
 
 import getCurrentUser from "@/app/actions/getCurrentUser";
-import prisma from "../../../libs/prismadb";
 
 interface IParams {
     listingId?: string;
 }
 
+// Maneja la solicitud POST para agregar un listado a los favoritos del usuario
+
 export async function POST(
     request: Request,
     { params }: {params: IParams}
 ) {
+
+    // Obtiene el usuario actual
+
     const currentUser = await getCurrentUser();
+
+    // Verifica si el usuario está autenticado
 
     if (!currentUser) {
         return NextResponse.error();
@@ -23,9 +30,13 @@ export async function POST(
         throw new Error("Invalid ID");
     }
 
+    // Obtiene los IDs de favoritos actuales del usuario y pushea el nuevo
+
     let favoriteIds = [...(currentUser.favoriteIds || [])];
 
     favoriteIds.push(listingId);
+
+    // Actualiza los favoritos del usuario en la base de datos y retorna respuesta
 
     const user = await prisma.user.update({
         where: {
@@ -38,6 +49,8 @@ export async function POST(
 
     return NextResponse.json(user);
 };
+
+// Realizamos los mismos pasos anterior pero para borrar un anuncio de favoritos
 
 export async function DELETE(
     request: Request,

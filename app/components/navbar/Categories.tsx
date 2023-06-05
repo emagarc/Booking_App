@@ -1,5 +1,7 @@
 "use client";
 
+import { usePathname, useSearchParams } from "next/navigation";
+
 import Container from "../Container";
 import CategoryBox from "../CategoryBox";
 
@@ -18,7 +20,8 @@ import {
 } from "react-icons/gi";
 import { MdOutlineVilla  } from "react-icons/md";
 import { FaSkiing } from "react-icons/fa";
-import { usePathname, useSearchParams } from "next/navigation";
+
+// Exportamos categories ya que lo utilizaremos en otrass partes del codigo
 
 export const categories = [
     {
