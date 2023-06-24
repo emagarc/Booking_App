@@ -12,14 +12,18 @@ const Logo: React.FC<LogoProps> = ({
 }) => {
     const router = useRouter();
   return (
-    <Image
-        onClick={() => router.push("/")}
-        alt="Logo"
-        className="hidden md:block cursor-pointer"
-        height="45"
-        width="45"
-        src="/images/logoPlane.png"
-    />
+    <div className="flex flex-row items-center text-rose-500 font-extrabold gap-4">
+      <Image
+          onClick={() => router.push("/")}
+          alt="Logo"
+          className="hidden md:block cursor-pointer"
+          height="42"
+          width="45"
+          src="/images/logoPlane.png"
+      />
+      BOOKING APP
+    </div>
+    
   )
 }
 
